@@ -58,8 +58,8 @@ module.exports = {
 
 	selectUserIdFromEmailPassword: function () {
 		return `SELECT user_id
-              FROM users
-                JOIN logins
+              FROM railway.users
+                JOIN railway.logins
                  ON users.id = logins.user_id
                     WHERE email LIKE ?
                       AND hashed_password LIKE ?
